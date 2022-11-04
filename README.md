@@ -15,7 +15,7 @@ With `--model` a Huggingface `transformer` model, `--data` pointing towards the 
 
 The pipeline returns a `.csv` file for each corpus type. This file contains the original prime/target pairs in the 4 prime/target configurations (X->X, X->Y, Y->Y, Y->X), as well as the sentence log probabilities and perplexities of each prime/target configuration. The priming effect can than easily be computed by subtracting the log probabilities of the incongruent configuration from the congruent configurations, for example using `pandas`:
 
-```
+```python
 import pandas as pd
 
 df = pd.read_csv('scores.csv')
