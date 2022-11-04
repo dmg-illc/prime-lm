@@ -6,7 +6,7 @@ This repository contains the pipeline and data for the TACL paper _*Structural P
 :tada: The paper will be presented at EMNLP 2022!
 
 ---
-###Pipeline
+### Pipeline
 The pipeline can be run from the command line as follows, using the script found in the `scripts` folder:
 
 `python3 pipeline.py --model "gpt2-large" --data data --save scores`
@@ -23,7 +23,7 @@ pe_x = df.logp_x_px - df.logp_x_py
 mean_pe = pe_x.mean()
 ```
 ---
-###Citation
+### Citation
 The paper can be cited as follows:
 ```
 @article{10.1162/tacl_a_00504,
