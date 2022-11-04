@@ -178,7 +178,7 @@ if __name__ == "__main__":
 
         score_dir = os.path.join(args.save, f"{model_name.split('/')[-1]}_scores")
         if not os.path.isdir(score_dir):
-            os.mkdir(score_dir)
+            os.makedirs(score_dir, exist_ok=True)
 
         init_time = time.time()
 

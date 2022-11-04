@@ -7,11 +7,12 @@ def capital(s):
 
 
 def init_corpora(data_dir, tokenizer, add_eos=False):
+    """ Processes the corpora in a way that is compatible with the pipeline and the current tokenizer. """
     primed_corpora = {}
 
     corpus_attributions = {}
 
-    glob_str = os.path.join(data_dir, "*/*.csv")
+    glob_str = os.path.join(data_dir, "*.csv")
     sep = ","
     bos = tokenizer.bos_token or tokenizer.cls_token
     skip_first_line = True
@@ -23,10 +24,6 @@ def init_corpora(data_dir, tokenizer, add_eos=False):
         sen_sep = tokenizer.sep_token
 
     COLUMNS = {
-        # "prime_x": "unprimed_start_idx",
-        # "prime_y": "unprimed_start_idx",
-        # "x": "unprimed_start_idx",
-        # "y": "unprimed_start_idx",
         "x_px": "prime_x_start_idx",
         "x_py": "prime_y_start_idx",
         "y_px": "prime_x_start_idx",
