@@ -22,6 +22,9 @@ df = pd.read_csv('scores.csv')
 pe_x = df.logp_x_px - df.logp_x_py
 mean_pe = pe_x.mean()
 ```
+
+One thing of note here is that across all corpora we use `x: active` and `y: passive` for the transitive constructions, and `x: prepositional object`, `y: double object` for the dative constructions. So `logp_x_py` for transitive indicates the log probability of an *active* target that follows a *passive* prime sentence.
+
 ---
 ### Citation
 The paper can be cited as follows:
